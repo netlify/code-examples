@@ -1,0 +1,8 @@
+{
+  "name": "functions",
+  "description": "netlify function example",
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  },
+  "private": true
+}

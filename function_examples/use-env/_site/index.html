@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Netlify Function Examples</title>
+</head>
+
+<body>
+    <div>
+        <h2>Use ENV variables in lambda function</h2>
+        <button type="submit" onclick="getWord()">Click me to get the ENV variable using a netlify aws lambda function</button>
+        <p id="token-p">The fake token from the ENV variable is...</p>
+    </div>
+    <script>
+        const getWord = async () => {
+            const textBlock = document.getElementById("token-p")
+            try {
+                const response = await fetch('/.netlify/functions/return-env')
+                const resObj = await response.json()
+                console.log(resObj)
+                textBlock.innerHTML = `Your FAKE_TOKEN is <strong>${resObj.token}</strong>`
+            } catch (err) {
+                textBlock.innerHTML = "Sorry the request failed"
+            }
+        }
+    </script>
+</body>
+
+</html>
