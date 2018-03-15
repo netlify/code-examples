@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Netlify Intercom Tools</title>
+</head>
+
+<body>
+    <div>
+        <h2>Intercom Tools</h2>
+        <button type="submit" onclick="getWord()">Click me to get a random word</button>
+        <p id="random-word-p">Your random word is...</p>
+    </div>
+    <script>
+        const getWord = async () => {
+            const textBlock = document.getElementById("random-word-p")
+            try {
+                const response = await fetch('/.netlify/functions/random')
+                const resObj = await response.json()
+                console.log(resObj)
+                textBlock.innerHTML = `Your random word is <strong>${resObj.word}</strong>`
+            } catch (err) {
+                textBlock.innerHTML = "Sorry the request failed"
+            }
+        }
+    </script>
+</body>
+
+</html>
