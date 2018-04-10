@@ -1,0 +1,25 @@
+{
+  "name": "token-hider",
+  "version": "1.0.0",
+  "description": "a token hider using netlify functions",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run site:build && npm run lambda:build",
+    "site:dev": "node server.js",
+    "site:build": "parcel build src/site/index.html --public-url ./",
+    "lambda:dev": "netlify-lambda serve src/lambda",
+    "lambda:build": "netlify-lambda build src/lambda"
+  },
+  "author": "Dennis Padiernos",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.3",
+    "http-proxy-middleware": "^0.18.0",
+    "netlify-lambda": "^0.2.1",
+    "parcel-bundler": "^1.7.0"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
+}

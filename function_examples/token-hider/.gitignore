@@ -1,0 +1,7 @@
+node_modules
+src/lambda/node_modules
+.vscode
+dist
+functions
+.cache
+.env

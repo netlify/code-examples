@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hzrd-maps-api</title>
+</head>
+<body>
+  <div>This function will call a lambda function, which will call an api endpoint, add a key and pass back the response in JSON format.</div>
+  <div>
+    <h4>Please enter your address <i>(street number and name, city, state)</i></h4>
+    <input id="address" type="text" style="width:300px"></input>
+    <button id="submit">Submit</button>
+  </div>
+  <div id="coordinates" hidden>
+    The coordinates for the address you entered is
+    <span id="coordindate-value"></span>
+  </div>
+  <div id="map" hidden>
+    Click the following link to view in Google Maps</br>
+    <span id="map-link"></span>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
