@@ -1,19 +1,23 @@
-# code-examples
+# Getting started with Netlify Functions 🐑
 
-Code snippets for Netlify users
+## Intro
 
-# Netlify AWS Lambda Function Examples
+As developers, we can't emphasize more the [benefits](https://aws.amazon.com/lambda/) of AWS Lambda functions.
 
-These next functions are in subfolders, but are meant to be deployed from their own repo. They each include their own netlify.toml files.
+With [Netlify Functions](https://www.netlify.com/docs/functions/), you can now deploy AWS Lambda functions on Netlify without configuring API gateways, coordinating deployments or setting up an AWS account. Just add each function as a file in your Git repository and Netlify will take care of the rest.
 
-## rest
+## Basic code examples
 
-This is a basic example of a function that when called, makes a request to a rest API using node-fetch, and returns a portion of the response back to the client. It includes an index.html that makes the call and displays the response
+To help you quickly get started, we hereby included several simple code examples under `functions_examples` folder to showcase the basic usage of Netlify Functions. Detailed instructions enclosed under each subfolder.
 
-## random-word
+## Further exploration
 
-This is a basic example of a function that when called, returns a random word from an array of words back to the user. This function has no build process and does not use any external packages
+For a more comprehensive tutorial, this enlightening [example](https://github.com/alexmacarthur/netlify-lambda-function-example) will walk you through the thought process step by step. Thanks to our user [alexmacarthur](https://github.com/alexmacarthur/netlify-lambda-function-example/commits?author=alexmacarthur).
 
-## use-env
+If you're curious about a more advanced use case or integrating with other Netlify add-on features, such as [Identity](https://www.netlify.com/docs/identity/) and [Form handling](https://www.netlify.com/docs/form-handling/), Checkout these tutorials:
 
-This is a basic example of a function that uses a build environment variable that's specified in the users netlify site's deploy settings.
+* [JAMstack architecture on Netlify: How Identity and Functions work together](https://www.netlify.com/blog/2018/03/29/jamstack-architecture-on-netlify-how-identity-and-functions-work-together/), which is based on our [Create React App Lambda](https://github.com/netlify/create-react-app-lambda) boiler plate.
+
+* [Creating your own URL shortener with Netlify Forms and Functions](https://medium.com/netlify/creating-your-own-url-shortener-with-netlify-forms-and-functions-a4286f55ea6c)
+
+Enjoy Functioning!
