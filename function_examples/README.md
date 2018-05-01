@@ -1,10 +1,10 @@
 # Getting started with Netlify Functions
 
-![Functions illustration](src/images/illo-functions.svg)
+![Functions illustration](../src/images/illo-functions.svg)
 
 ## Intro
 
-As developers, we can't emphasize more the [benefits](https://aws.amazon.com/lambda/) of AWS Lambda functions.
+As developers, we can't be more excited about the [benefits](https://aws.amazon.com/lambda/) of AWS Lambda functions.
 
 With [Netlify Functions](https://www.netlify.com/docs/functions/), you can now deploy AWS Lambda functions on Netlify without configuring API gateways, coordinating deployments or setting up an AWS account. Just add each function as a file in your Git repository and Netlify will take care of the rest.
 
