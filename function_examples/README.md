@@ -1,16 +1,22 @@
-# Getting started with Netlify Functions
+# Netlify Functions code examples
 
-![Functions illustration](../src/images/illo-functions.svg)
+## Basic examples
 
-## Intro
+### [Random Word](https://github.com/netlify/code-examples/tree/master/function_examples/random-word)
 
-As developers, we can't be more excited about the [benefits](https://aws.amazon.com/lambda/) of AWS Lambda functions.
+A very basic function with no dependencies or build tools.
 
-With [Netlify Functions](https://www.netlify.com/docs/functions/), you can now deploy AWS Lambda functions on Netlify without configuring API gateways, coordinating deployments or setting up an AWS account. Just add each function as a file in your Git repository and Netlify will take care of the rest.
+### [Use Env](https://github.com/netlify/code-examples/tree/master/function_examples/use-env)
 
-## Basic code examples
+Function that uses Netlify build environment variables, with no dependencies or build tools.
 
-To help you quickly get started, we created several simple code examples under `functions_examples` folder to showcase the basic usage of Netlify Functions. Detailed instructions enclosed under each subfolder.
+### [Rest](https://github.com/netlify/code-examples/tree/master/function_examples/rest)
+
+Function for calling an external API with node-fetch, using `netlify-lambda` to bundle dependencies.
+
+### [Token Hider](https://github.com/netlify/code-examples/tree/master/function_examples/token-hider)
+
+Function using `axios` to access an external API, using Netlify build environment variables to hide the API token; bundled with `netlify-lambda`.
 
 ## Further exploration
 
@@ -21,5 +27,3 @@ If you're curious about integrating Functions with other Netlify add-on features
 * [JAMstack architecture on Netlify: How Identity and Functions work together](https://www.netlify.com/blog/2018/03/29/jamstack-architecture-on-netlify-how-identity-and-functions-work-together/), which is based on our [Create React App Lambda](https://github.com/netlify/create-react-app-lambda) boiler plate.
 
 * [Creating your own URL shortener with Netlify Forms and Functions](https://medium.com/netlify/creating-your-own-url-shortener-with-netlify-forms-and-functions-a4286f55ea6c)
-
-Enjoy Functioning!
