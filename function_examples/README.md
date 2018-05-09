@@ -8,15 +8,15 @@ A very basic function with no dependencies or build tools.
 
 ### [Use Env](https://github.com/netlify/code-examples/tree/master/function_examples/use-env)
 
-Function that uses Netlify build environment variables, with no dependencies or build tools.
+A function that uses Netlify build environment variables, with no dependencies or build tools.
 
 ### [Rest](https://github.com/netlify/code-examples/tree/master/function_examples/rest)
 
-Function for calling an external API with node-fetch, using `netlify-lambda` to bundle dependencies.
+A function for calling an external API with `node-fetch`, using `netlify-lambda` to bundle dependencies.
 
 ### [Token Hider](https://github.com/netlify/code-examples/tree/master/function_examples/token-hider)
 
-Function using `axios` to access an external API, using Netlify build environment variables to hide the API token; bundled with `netlify-lambda`.
+A function that uses `axios` to access an external API and uses Netlify build environment variables to hide the API token; bundled with `netlify-lambda`.
 
 ## Further exploration
 

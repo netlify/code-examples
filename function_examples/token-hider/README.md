@@ -22,9 +22,10 @@ Clone the repo, from the command line, go to `function_examples/token-hider` fol
 
 ### 2. Run Lambda Functions
 
+Type in the following script in your terminal:
+
 ```
-API_URL="https://maps.googleapis.com/maps/api/geocode/json"
-API_TOKEN="your Google Maps API key" npm run lambda:dev
+API_URL="https://maps.googleapis.com/maps/api/geocode/json" API_TOKEN="your Google Maps API key" npm run lambda:dev
 ```
 
 This will start a local dev server. Requests to `http://localhost:9000/getapi?address=<the address>` will now be handled by `functions/getapi.js`.
@@ -40,7 +41,9 @@ Examine the `server.js` file. It is already configured to proxy all requests des
 Open a new console and type in: `npm run site:dev`
 The site is now available at `http://localhost:1234/`
 
-Add a query to retrieve a specific data object, e.g.:
-`localhost:9000/getapi?address=220+Stanhope+St,+Brooklyn,+NY`
+Go to `localhost:1234` and type the following address in the field and hit submit:
+`220 Stanhope St, Brooklyn, NY`
 
-Open the site in your browser and verify that the API key is not anywhere on the client side.
+This will make a request to the function and return a longitude and latitude value.
+
+Inspect the site in your browser dev tools and verify that the API key is not anywhere on the client side.
