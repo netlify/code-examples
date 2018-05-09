@@ -4,11 +4,11 @@
 
 ### [Random Word](https://github.com/netlify/code-examples/tree/master/function_examples/random-word)
 
-A very basic function with no dependencies or build tools.
+A basic usage case that triggers a function to generate a random word. No dependencies or build tools.
 
 ### [Use Env](https://github.com/netlify/code-examples/tree/master/function_examples/use-env)
 
-A function that uses Netlify build environment variables, with no dependencies or build tools.
+An example that uses Netlify build environment variables, with no dependencies or build tools.
 
 ### [Rest](https://github.com/netlify/code-examples/tree/master/function_examples/rest)
 
