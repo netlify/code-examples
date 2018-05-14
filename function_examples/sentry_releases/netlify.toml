@@ -1,0 +1,8 @@
+[build]
+  functions = "functions"
+  publish = "site"
+  command = "make build-functions"
+
+[build.environment]
+  # change this value, you can set it in Netlify's UI too
+  GO_IMPORT_PATH = "github.com/netlify/code-examples"
