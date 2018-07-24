@@ -1,0 +1,55 @@
+<head>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+        function onSubmit(token) {
+          document.getElementById("contact-form").submit();
+        }
+      </script>
+</head>
+  <body>
+
+    <form class="contact-form" id="contact-form" name="contact-v3" method="POST" netlify-recaptcha netlify-honeypot="required_name" netlify>
+    <div class="field-body">
+        <p>
+                <label>Don't fill this out if you're human: <input name="required_name" /></label>
+        </p>
+    </div>
+    <div class="field is-required">
+        <label class="label" for="contact-email">
+            Email
+        </label>
+        <div class="control">
+            <input class="input" type="email" id="contact-email" maxlength="80" name="email" required>
+        </div>
+    </div>
+    <div class="field is-required">
+        <label class="label" for="contact-body">
+            Message
+        </label>
+        <div class="control">
+            <textarea class="textarea" id="contact-body" name="message" required></textarea>
+        </div>
+    </div>
+
+    <p>
+        <small class="p--fine-print recaptcha-terms">
+            Protected by reCAPTCHA. See
+            <a class="p__a" href="https://www.google.com/intl/en/policies/privacy/" target="_blank" rel="external">Privacy Policy</a>
+            and
+            <a class="p__a" href="https://www.google.com/intl/en/policies/terms/" target="_blank" rel="external">Terms of Use</a>.
+        </small>
+    </p>
+
+    <div class="control">
+        <button
+        class="g-recaptcha"
+        data-sitekey="YOUR_SITE_KEY_HERE"
+        data-callback="onSubmit">
+        Submit
+        </button>
+    </div>
+</form>
+
+
+  </body>
+</html>
