@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>vue-recaptcha exmaple</title>
+  </head>
+  <body>
+    <h1>This is example to use vue-recaptcha</h1>
+    <div id="root">
+      <div>
+        <h3> Invisible ReCAPTCHA </h3>
+        <form @submit.prevent="onSubmit" data-netlify-recaptcha data-netlify>
+          <vue-recaptcha
+            ref="invisibleRecaptcha"
+            @verify="onVerify"
+            @expired="onExpired"
+            size="invisible"
+            :sitekey="sitekey">
+          </vue-recaptcha>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://unpkg.com/vue@latest/dist/vue.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer>
+    </script>
+    <script src="https://unpkg.com/vue-recaptcha@latest/dist/vue-recaptcha.js"></script>
+    <script>
+      new Vue({
+	      el: '#root',
+	      data: {
+	        sitekey: 'YOUR_SITE_KEY_HERE'
+	      },
+	      components: {
+	        'vue-recaptcha': VueRecaptcha
+	      },
+	      methods: {
+	        onSubmit: function () {
+	          this.$refs.invisibleRecaptcha.execute()
+	        },
+	        onVerify: function (response) {
+	          console.log('Verify: ' + response)
+	        },
+	        onExpired: function () {
+	          console.log('Expired')
+	        },
+	        resetRecaptcha () {
+	          this.$refs.recaptcha.reset() // Direct call reset method
+	        }
+	      }
+	    })
+    </script>
+  </body>
+</html>
