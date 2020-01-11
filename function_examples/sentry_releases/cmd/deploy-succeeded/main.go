@@ -18,7 +18,7 @@ type deploy struct {
 func handler(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	var d deploy
 
-	if err := json.NewDecoder(bytes.NewReader([]byte(request.Body))).Decode(&d); err != nil {
+    	if err := json.NewDecoder(request.Body).Decode(&d); err != nil {
 		return events.APIGatewayProxyResponse{
 			StatusCode: 500,
 			Body:       err.Error(),
